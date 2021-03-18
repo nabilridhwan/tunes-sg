@@ -1,149 +1,175 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="myStyle.css">
-    <style>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@media (min-width: 576px) { p{
-		font-family:Verdana, Geneva, sans-serif;
-		font-size:16px;	
-	}}
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="myStyle.css">
+  <style>
+    @media (min-width: 576px) {
+      p {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 16px;
+      }
+    }
 
-@media (min-width: 768px) { p{
-		font-family:Verdana, Geneva, sans-serif;
-		font-size:16px;	
-	}}
+    @media (min-width: 768px) {
+      p {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 16px;
+      }
+    }
 
-@media (min-width: 992px) { p{
-		font-family:Verdana, Geneva, sans-serif;
-		font-size:16px;	
-	}}
+    @media (min-width: 992px) {
+      p {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 16px;
+      }
+    }
+  </style>
+
+  <title>Welcome!</title>
 
 
-</style>
 
-<title>Welcome!</title>
+</head>
 
+<body>
 
-
-  </head>
-  <body>
-   
-    <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;" > 
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html" p style="font-family:Sacramento">Tunes</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="aboutus.html">About Us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="MIGuide.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Musical Instrument Guide
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="percussion.html">Percussion</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="woodwind.html">Woodwinds</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="strings.html">Strings</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="DragnDrop.html">Game</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Us</a>
-              </li>
-            </ul>
-          
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-
-      <!--Jumbotron-->
-      <div class="container my-5">
-        <div class="jumbotron">
-            <H1>Sound Of Music</H1>
-            <hr class="my-4">
-            <p>Being one of Asia’s Leading Music Retailer, Tunes’ journey began in 1998 when seeing that music could shape both soul and society, we set out to establish a legacy of our own.</p>
-             <a class="btn btn-primary btn-lg" href="aboutus.html" role="button">Find out more</a>
-        </div>
-    </div>
-    
-
-    <!--Grid Layour for Content-->
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar navbar-light">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <h3><a href="#">The SUSS Spotlight</a></h3>
-                <p>SUSS is Singapore's only private university and our mission is to create excellence in lifelong education through a uniquely-designed learning experience that equips learners for a better future.</p>
-                <p><img src="img.jpg"/></p><br>
-            </div>
-            <div class="col-lg-3">
-                <h3><a href="#">Highlight</a></h3>
-                <p>The School of Business at SUSS has launched the Masters of Business Administration programme (SUSS MBA). Starting July 2015, the SUSS MBA will accept the first batch of students.</p>
-                <a href="#" class="btn btn-info">Read More</a>
-            </div>
-            <div class="col-lg-3">
-                <h3><a href="#">Why SUSS</a></h3>
-                <p>You'll be able to attend lectures, participate in group discussions with your lecturer and classmates at your comfort and convenience through online learning.</p>
-                <a href="#" class="btn btn-info">Read More</a>
-            </div>
-        </div>
-    </div>
-    
+      <a class="navbar-brand" href="index.html">Tunes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="MIGuide.html" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Musical Instrument Guide
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="percussion.html">Percussion</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="woodwind.html">Woodwinds</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="strings.html">Strings</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="game.html">Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact Us</a>
+          </li>
+        </ul>
 
-       <!--Footer-->
- <br><br>
- <div class="container my-5">
-	 <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-		 <div class="container">
-			 <p class="navbar-text pull-left">Copyright © 2020 Tunes Pte Ltd. All rights reserved.</p>
-			 <a href="index.html" class="navbar-btn btn-danger btn pull-right">Home</a>
-		 </div>
-	 </div>
- </div>
-      
-    <!--Modal-->
-    <div id="exampleModal" class="modal" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
       </div>
-    
-    
-  </body>
+    </div>
+  </nav>
+
+  <!-- Flute -->
+  <div class="instrument">
+    <img class="instrument-image" src="./image/flute.jpg">
+    <div class="container">
+      <h1 class="instrument-name">Flute</h1>
+      <p class="instrumnet-description">A flute is an aerophone or reedless wind instrument that produces its sound from
+        the flow of air across an opening. It has a clear and bright sound with a distinctive warmth, refinement, and
+        subtlety to its tone. </p>
+    </div>
+  </div>
+
+  <!-- Clarinet -->
+  <div class="instrument">
+    <img class="instrument-image" src="./image/clarinet.jpg">
+    <div class="container">
+      <h1 class="instrument-name">Clarinet</h1>
+      <p class="instrumnet-description">Clarinet has a single-reed mouthpiece, a straight, cylindrical tube with an
+        almost
+        cylindrical bore, and a flared bell. It also boasts a register of approximately four octaves-the largest of any
+        wind instrument.</p>
+    </div>
+  </div>
+
+  <!-- Saxaphone -->
+  <div class="instrument">
+    <img class="instrument-image" src="./image/saxophone.jpg">
+    <div class="container">
+      <h1 class="instrument-name">Saxaphone</h1>
+      <p class="instrumnet-description">The saxophone is usually made of brass and played with a single-reed mouthpiece.
+        It is an instrument with a tone somewhere between a brass instrument and a woodwind. The sax is a must in all
+        types of music from jazz, to classical, to pop, when a smooth and bright sound is called for.</p>
+    </div>
+  </div>
+
+  <!-- Oboes -->
+  <div class="instrument">
+    <img class="instrument-image" src="./image/oboes.jpg">
+    <div class="container">
+      <h1 class="instrument-name">Oboe</h1>
+      <p class="instrumnet-description">The oboe is a type of double reed woodwind instrument and the most common oboe
+        plays in the treble or soprano range. Its name comes from the French for "high-pitched wood," are excellent for
+        solo performances with many notes in high ranges. The oboe is extremely difficult to play.</p>
+    </div>
+  </div>
+
+  <!-- Bassoon -->
+  <div class="instrument">
+    <img class="instrument-image" src="./image/bassoon.jpg">
+    <div class="container">
+      <h1 class="instrument-name">Bassoon</h1>
+      <p class="instrumnet-description">The bassoon is a woodwind instrument in the double reed family that plays music
+        written in the bass and tenor clefs, and occasionally the treble. The long, wide wooden pipe of the bassoon
+        contains much wisdom.</p>
+    </div>
+  </div>
+
+  <!-- Recorder -->
+  <div class="instrument">
+    <img class="instrument-image" src="./image/recorder.jpg">
+    <div class="container">
+      <h1 class="instrument-name">Recorder</h1>
+      <p class="instrumnet-description">Recorder known as internal duct flutes—flutes with a whistle mouthpiece, also
+        known as fipple flutes. It is also familiar to most as the instrument used today in school lessons. However, its
+        history extends to ancient times, and modern day performers are active in a wide range of settings.</p>
+    </div>
+  </div>
+
+
+  <!--Footer-->
+
+  <footer class="footer page-footer">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Copyright © 2020 Tunes Pte Ltd. All rights reserved.
+    </div>
+
+  </footer>
+
+</body>
+
 </html>

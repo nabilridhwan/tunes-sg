@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Easel : Drag n Drop example</title>
+	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+	<script src="ndgmr.Collision.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+		crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+	<script>
+
+		var stage;	//
+		var gfxLoaded;
+		//add and remove in the container and contains all the items
+		var container;
+		var alphaThreshold;
+		var score;
+		var showtext;
+
+		//2: Declare variables
+		var s1; var bs1;	//b - bitmap	
+		var s2; var bs2;
+		var p1; var bp1;
+		var p2; var bp2;
+		var w1; var bw1;
+		var w2; var bw2;
+		var sbox; var bsbox;
+		var pbox; var bpbox;
+		var wbox; var bwbox;
+
+		function init() {
+			//2: initialise objects - Images
+			s1 = new Image();
+			s2 = new Image();
+			p1 = new Image();
+			p2 = new Image();
+			w1 = new Image();
+			w2 = new Image();
+			sbox = new Image();
+			pbox = new Image();
+			wbox = new Image();
+
+			gfxLoaded = 0;  //track if total number of images loaded into object.
+			alphaThreshold = 0;
+			score = 0;
+
+			//1: create canvas
+			/* Link Canvas */
+			stage = new createjs.Stage("demoCanvas");
+			stage.mouseEventsEnabled = true;
+
+			//    The frequency parameter indicates how many times per second EaselJS should calculate what is currently under the pointer. A higher number is more responsive, but also more computationally expensive. It defaults to 20 times per second.
+
+			stage.enableMouseOver(10);
+			container = new createjs.Container();
+			stage.addChild(container);
+
+			//3
+			/* Load GFX - graphics */
+			s1.src = 'image/s1.png';
+			s1.name = 's1';
+			s1.onload = loadGfx;
+
+			s2.src = 'image/s2.png';
+			s2.name = 's2';
+			s2.onload = loadGfx;
+
+			p1.src = 'image/p1.png';
+			p1.name = 'p1';
+			p1.onload = loadGfx;
+
+			p2.src = 'image/p2.png';
+			p2.name = 'p2';
+			p2.onload = loadGfx;
+
+			w1.src = 'image/w1.png';
+			w1.name = 'w1';
+			w1.onload = loadGfx;
+
+			w2.src = 'image/w2.png';
+			w2.name = 'w2';
+			w2.onload = loadGfx;
+
+			sbox.src = 'image/sbox.png';
+			sbox.name = 'sbox';
+			sbox.onload = loadGfx;
+
+			pbox.src = 'image/pbox.png';
+			pbox.name = 'pbox';
+			pbox.onload = loadGfx;
+
+			wbox.src = 'image/wbox.png';
+			wbox.name = 'wbox';
+			wbox.onload = loadGfx;
+
+
+			//Create text score
+			showtext = new createjs.Text("Score : " + score, "16px Arial", "#F08080");
+			showtext.x = 10;
+			showtext.y = 10;
+
+			/* Ticker */
+			//    The Ticker provides a centralized tick or heartbeat broadcast at a set interval. Listeners can subscribe to the tick event to be notified when a set time interval has elapsed.
+			createjs.Ticker.framerate = 30;
+			createjs.Ticker.addEventListener("tick", handleTick);
+		}
+
+
+		//6
+		function handleTick(event) {
+			stage.update();
+		}
+
+		//4
+		function loadGfx(e) {
+			if (e.target.name = 's1') {
+				bs1 = new createjs.Bitmap(s1);
+				bs1.name = "bs1";
+				bs1.num = 1;
+			}
+			if (e.target.name = 's2') {
+				bs2 = new createjs.Bitmap(s2);
+				bs2.name = "bs2";
+				bs2.num = 1;
+			}
+			if (e.target.name = 'p1') {
+				bp1 = new createjs.Bitmap(p1);
+				bp1.name = "bp1";
+				bp1.num = 2;
+			}
+			if (e.target.name = 'p2') {
+				bp2 = new createjs.Bitmap(p2);
+				bp2.name = "bp2";
+				bp2.num = 2;
+			}
+			if (e.target.name = 'w1') {
+				bw1 = new createjs.Bitmap(w1);
+				bw1.name = "bw1";
+				bw1.num = 3;
+			}
+			if (e.target.name = 'w2') {
+				bw2 = new createjs.Bitmap(w2);
+				bw2.name = "bw2";
+				bw2.num = 3;
+			}
+			if (e.target.name = 'sbox') {
+				bsbox = new createjs.Bitmap(sbox);
+				bsbox.name = "bsbox";
+				bsbox.num = 1;
+			}
+			if (e.target.name = 'pbox') {
+				bpbox = new createjs.Bitmap(pbox);
+				bpbox.name = "bpbox";
+				bpbox.num = 2;
+			}
+			if (e.target.name = 'wbox') {
+				bwbox = new createjs.Bitmap(wbox);
+				bwbox.name = "bwbox";
+				bwbox.num = 3;
+			}
+
+			gfxLoaded++;
+			if (gfxLoaded == 6) {
+				loadObject();
+			}
+		}
+
+		//5
+		function loadObject() {
+			//set the position of the objects
+			bsbox.x = 40; bsbox.y = 300;
+			bpbox.x = 300; bpbox.y = 300;
+			bwbox.x = 560; bwbox.y = 300;
+
+			bs1.x = Math.floor(Math.random() * (700 - 50));
+			bs1.y = Math.floor(Math.random() * (200 - 50));
+
+			bs2.x = Math.floor(Math.random() * (700 - 50));
+			bs2.y = Math.floor(Math.random() * (200 - 50));
+
+			bp1.x = Math.floor(Math.random() * (700 - 50));
+			bp1.y = Math.floor(Math.random() * (200 - 50));
+
+			bp2.x = Math.floor(Math.random() * (700 - 50));
+			bp2.y = Math.floor(Math.random() * (200 - 50));
+
+			bw1.x = Math.floor(Math.random() * (700 - 50));
+			bw1.y = Math.floor(Math.random() * (200 - 50));
+
+			bw2.x = Math.floor(Math.random() * (700 - 50));
+			bw2.y = Math.floor(Math.random() * (200 - 50));
+
+			//load objects onto the canvas
+			container.addChild(bs1, bs2, bp1, bp2, bw1, bw2, bsbox, bpbox, bwbox, showtext);
+
+			//7
+			//add event listener to objects
+			bs1.addEventListener("mousedown", clickObject);
+			bs2.addEventListener("mousedown", clickObject);
+			bp1.addEventListener("mousedown", clickObject);
+			bp2.addEventListener("mousedown", clickObject);
+			bw1.addEventListener("mousedown", clickObject);
+			bw2.addEventListener("mousedown", clickObject);
+
+			bs1.addEventListener("pressmove", moveObject);
+			bs2.addEventListener("pressmove", moveObject);
+			bp1.addEventListener("pressmove", moveObject);
+			bp2.addEventListener("pressmove", moveObject);
+			bw1.addEventListener("pressmove", moveObject);
+			bw2.addEventListener("pressmove", moveObject);
+
+			bs1.addEventListener("pressup", checkObject);
+			bs2.addEventListener("pressup", checkObject);
+			bp1.addEventListener("pressup", checkObject);
+			bp2.addEventListener("pressup", checkObject);
+			bw1.addEventListener("pressup", checkObject);
+			bw2.addEventListener("pressup", checkObject);
+
+			stage.update();
+		}
+
+		//8
+		function clickObject(e) {
+
+			if (e.target != null) {
+				e.target.parent.addChild(e.target); 	//place item as highest depth
+				//keep track of current x and y for snapping back
+				e.target.storeX = e.target.x; e.target.storeY = e.target.y;
+				//offset - so the object will not be out of screen
+				e.target.offset = { x: e.target.x - e.stageX, y: e.target.y - e.stageY };
+
+			}
+
+		}
+
+		//9
+		function moveObject(e) {
+			e.target.x = e.stageX + e.target.offset.x;
+			e.target.y = e.stageY + e.target.offset.y;
+			stage.update();
+		}
+
+		//10    
+		function checkObject(e) {
+			//check if collide with the bins
+
+			var object = container.getChildByName(e.target.name);
+			var object2 = container.getChildByName("bsbox");
+			var object3 = container.getChildByName("bpbox");
+			var object4 = container.getChildByName("bwbox");
+			//console.log(e.currentTarget.name);
+
+			var cBin = ndgmr.checkPixelCollision(object, object2, alphaThreshold);
+			if (cBin) {
+				//check if correct bin, update score and remove object
+				if (object.num == object2.num) { score = score + 10; }
+				else { score = score - 10; }
+				showtext.text = "Score : " + score;
+				container.removeChild(object);
+
+			}
+
+			// returns a rect with the global position of the colliding pixel(s)
+			// alphaThreshold default is 0, set to higher value to ignore collisions with semi transparent pixels
+			// the last parameter defines if all pixels should be checked, in this case it returns a
+			// rect with the size of the full collision, if false a rect with the size 1x1 is returned
+
+			var cRBin = ndgmr.checkPixelCollision(object, object3, alphaThreshold);
+			if (cRBin) {
+				//check if correct bin, update score and remove object
+				if (object.num == object3.num) { score = score + 10; }
+				else { score = score - 10; }
+				showtext.text = "Score : " + score;
+				container.removeChild(object);
+			}
+
+			var cRBin = ndgmr.checkPixelCollision(object, object4, alphaThreshold);
+			if (cRBin) {
+				//check if correct bin, update score and remove object
+				if (object.num == object4.num) { score = score + 10; }
+				else { score = score - 10; }
+				showtext.text = "Score : " + score;
+				container.removeChild(object);
+			}
+
+
+			stage.update();
+
+		}
+	</script>
+
+</head>
+
+<body onLoad="init();">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Tunes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="MIGuide.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Musical Instrument Guide
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="percussion.html">Percussion</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="woodwind.html">Woodwinds</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="strings.html">Strings</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="game.html">Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+	<div class="jumbotron jmb my-5">
+		<h1>Let's play a game!</h1>
+		<p>Drag each of the instruments to the correct type!</p>
+		<a class="btn btn-primary" href="game.html" role="button">Restart Game</a>
+
+	</div>
+
+	<div align="center" class="my-5">
+		<canvas id="demoCanvas" width="800" height="500">
+			This browser does not support HTML5.
+		</canvas>
+	</div>
+
+	<!--Footer-->
+
+	<footer class="footer page-footer">
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3">Copyright © 2020 Tunes Pte Ltd. All rights reserved.
+		</div>
+
+	</footer>
+
+</body>
+
+</html>

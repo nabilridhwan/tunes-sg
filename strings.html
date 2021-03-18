@@ -1,149 +1,134 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="myStyle.css">
-    <style>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@media (min-width: 576px) { p{
-		font-family:Verdana, Geneva, sans-serif;
-		font-size:16px;	
-	}}
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="myStyle.css">
 
-@media (min-width: 768px) { p{
-		font-family:Verdana, Geneva, sans-serif;
-		font-size:16px;	
-	}}
-
-@media (min-width: 992px) { p{
-		font-family:Verdana, Geneva, sans-serif;
-		font-size:16px;	
-	}}
-
-
-</style>
-
-<title>Welcome!</title>
+  <title>Welcome!</title>
 
 
 
-  </head>
-  <body>
-   
-    <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;" > 
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html" p style="font-family:Sacramento">Tunes</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar navbar-light">
+      <div class="container">
+          <a class="navbar-brand" href="index.html">Tunes</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="aboutus.html">About Us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="MIGuide.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Musical Instrument Guide
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="percussion.html">Percussion</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="woodwind.html">Woodwinds</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="strings.html">Strings</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="DragnDrop.html">Game</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Us</a>
-              </li>
-            </ul>
-          
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="aboutus.html">About Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="MIGuide.html" id="navbarDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Musical Instrument Guide
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="percussion.html">Percussion</a></li>
+                          <li>
+                              <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="woodwind.html">Woodwinds</a></li>
+                          <li>
+                              <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="strings.html">Strings</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="game.html">Game</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="contactus.html">Contact Us</a>
+                  </li>
+              </ul>
+
           </div>
-        </div>
-      </nav>
-
-      <!--Jumbotron-->
-      <div class="container my-5">
-        <div class="jumbotron">
-            <H1>Sound Of Music</H1>
-            <hr class="my-4">
-            <p>Being one of Asia’s Leading Music Retailer, Tunes’ journey began in 1998 when seeing that music could shape both soul and society, we set out to establish a legacy of our own.</p>
-             <a class="btn btn-primary btn-lg" href="aboutus.html" role="button">Find out more</a>
-        </div>
-    </div>
-    
-
-    <!--Grid Layour for Content-->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <h3><a href="#">The SUSS Spotlight</a></h3>
-                <p>SUSS is Singapore's only private university and our mission is to create excellence in lifelong education through a uniquely-designed learning experience that equips learners for a better future.</p>
-                <p><img src="img.jpg"/></p><br>
-            </div>
-            <div class="col-lg-3">
-                <h3><a href="#">Highlight</a></h3>
-                <p>The School of Business at SUSS has launched the Masters of Business Administration programme (SUSS MBA). Starting July 2015, the SUSS MBA will accept the first batch of students.</p>
-                <a href="#" class="btn btn-info">Read More</a>
-            </div>
-            <div class="col-lg-3">
-                <h3><a href="#">Why SUSS</a></h3>
-                <p>You'll be able to attend lectures, participate in group discussions with your lecturer and classmates at your comfort and convenience through online learning.</p>
-                <a href="#" class="btn btn-info">Read More</a>
-            </div>
-        </div>
-    </div>
-    
-
-       <!--Footer-->
- <br><br>
- <div class="container my-5">
-	 <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-		 <div class="container">
-			 <p class="navbar-text pull-left">Copyright © 2020 Tunes Pte Ltd. All rights reserved.</p>
-			 <a href="index.html" class="navbar-btn btn-danger btn pull-right">Home</a>
-		 </div>
-	 </div>
- </div>
-      
-    <!--Modal-->
-    <div id="exampleModal" class="modal" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
       </div>
-    
-    
-  </body>
+  </nav>
+
+  <!--Jumbotron-->
+  <div class="container my-5">
+    <div class="jumbotron">
+    </div>
+  </div>
+
+
+  <!--Container-->
+
+  <!-- Classical Guitar -->
+  <div class="instrument">
+    <img class="instrument-image" src="./image/classicalguitar.jpg">
+    <div class="container">
+      <h1 class="instrument-name">Classical Guitar</h1>
+      <p class="instrumnet-description">An acoustic wooden string instrument with strings made of gut or nylon. The classical guitar can play a wide range of types of music-from classical music to bossa nova and jazz.
+        Dubbed a mini-orchestra, the classical guitar covers an impressive range of timbres.
+        </p>
+    </div>
+  </div>
+
+  <!-- Acoustic Guitar -->
+  <div class="instrument">
+    <img class="instrument-image" src="./image/acousticguitar.jpg">
+    <div class="container">
+      <h1 class="instrument-name">Acoustic Guitar</h1>
+      <p class="instrumnet-description">Acoustic Guitar’s strings vibrate a sound board on a resonant body to project a sound wave through the air. The timbre of a guitar is determined by its body. Most people have never looked inside a guitar and may not realize it, but guitars are actually very cleverly designed.</p>
+    </div>
+  </div>
+
+  <!-- Electric Guitar -->
+  <div class="instrument">
+    <img class="instrument-image" src="./image/electricguitar.jpg">
+    <div class="container">
+      <h1 class="instrument-name">Electric Guitar</h1>
+      <p class="instrumnet-description">An electric guitar is a guitar that requires external amplification in order to be heard at typical performance volumes, unlike a standard acoustic guitar. Even though electricity is used to amplify the volume, the body and neck are merely pieces of wood. These instruments come in unique shapes and colors.</p>
+    </div>
+  </div>
+
+  <!-- Violin -->
+  <div class="instrument">
+    <img class="instrument-image" src="./image/violin.jpg">
+    <div class="container">
+      <h1 class="instrument-name">Violin</h1>
+      <p class="instrumnet-description">The violin, sometimes known as a fiddle, is a wooden chordophone in the violin family. Most violins have a hollow wooden body. It is the smallest and thus highest-pitched instrument in the family in regular use. Whether performing an elegant solo or being the heart of the orchestra, the violin is a "star" in the music world.</p>
+    </div>
+  </div>
+
+
+  <!--Footer-->
+
+  <footer class="footer page-footer">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Copyright © 2020 Tunes Pte Ltd. All rights reserved.
+    </div>
+  
+  </footer>
+
+</body>
+
 </html>

@@ -1,9 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto&family=Sacramento&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Poppins', sans-serif;
+}
+
+.title{
+    font-weight: 700;
+}
+
+.main-jmb{
+    color: white;
+    background-image: url(./image/jumbotronimage.png);
+    padding: 10em 0;
+    background-size: cover;
+    margin: 0 0 5em 0;
+}
+
+.jmb{
+    text-align: center;
+}
+
+.jmb h1{
+    font-weight: 700;
+    color: #6D4C41;
+}
+
+.btn-primary{
+    background-color: #6D4C41;
+    border: 0;
+}
+
+.btn-primary:hover{
+    background-color: #6d4c41c9;
+    border: 0;
+}
+
+.navbar{
+    background-color: #6D4C41;
+}
+
 .navbar-brand{
- font-family: 'Sacramento', serif;
- font-size: 48px;
-text-shadow: 4px 4px 4px #aaa;
-      }
+    color: white !important;
+    font-family: 'Sacramento', serif;
+    font-size: 36px;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.mig-header{
+    text-align: center;
+}
+
+.mig-header h1{
+    font-weight: 600;
+    color: #6D4C41;
+}
+
+.mig-group{
+    text-align: center;
+}
+
+.mig-group h2{
+    font-weight: 500;
+    color: #6D4C41;
+}
 
 #demoCanvas {
     border-style: groove;
+}
+
+.instrument img{
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.instrument{
+    margin: 0 0 5rem 0;
+    text-align: center;
+}
+
+.instrument-name{
+    font-weight: 700;
+    color: #6D4C41;
+    margin: 1em 0 0.5em 0;
+}
+
+.page-footer{
+    background-color: #6D4C41;
+    color: white;
+}
+
+@media (min-width: 576px) {
+    /* p {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 16px;
+    } */
+}
+
+@media (min-width: 768px) {
+    /* p {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 16px;
+    } */
+}
+
+@media (min-width: 992px) {
+    /* p {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 16px;
+    } */
 }
