@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6{
     padding: 10em 0;
     background-size: cover;
     margin: 0 0 5em 0;
+    z-index: auto;
 }
 
 .jmb{
@@ -120,12 +121,13 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* Custom button */
-  .wrapper{
+.wrapper{
     position: relative;
-  }
-  
-  
-  .btn-lnk{
+    z-index: 0;
+}
+
+
+.btn-lnk{
     display: block;
     width: 200px;
     height: 50px;
@@ -139,10 +141,10 @@ h1, h2, h3, h4, h5, h6{
     letter-spacing: 1px;
     border: 3px solid #6D4C41;
     transition: all .35s;
-  }
-  
-  .icon{
-    width: 50px;
+}
+
+.icon{
+width: 50px;
     height: 50px;
     /* border: 3px solid transparent; */
     position: absolute;
@@ -151,32 +153,30 @@ h1, h2, h3, h4, h5, h6{
     left: 0;
     transition: all .35s;
     z-index: -1;
-    
     transform: rotate(45deg);
-  }
-  
-  .icon svg{
+}
+
+.icon svg{
     width: 30px;
     position: absolute;
     top: calc(50% - 15px);
     left: calc(50% - 15px);
     fill: #fff;
     transition: all .35s;
-    
+
     transform: rotate(-45deg);
-  }
-  
-  .btn-lnk:hover{
+}
+
+.btn-lnk:hover{
     width: 250px;
     border: 3px solid #fff;
     background: transparent;
     color: #fff;
-  }
-  
-  .btn-lnk:hover + .icon{
-    border: 3px solid #FFF;
-      transform: rotate(-45deg);
-  transform: translate(245px, 0) rotate(45deg);
-  z-index: 0;
+}
 
-  }
+.btn-lnk:hover + .icon{
+    border: 3px solid #FFF;
+        transform: rotate(-45deg);
+    transform: translate(245px, 0) rotate(45deg);
+    /* z-index: 0; */
+}
