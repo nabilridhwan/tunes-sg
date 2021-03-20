@@ -13,6 +13,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
 		crossorigin="anonymous"></script>
+	<script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
@@ -37,8 +39,15 @@
 		var sbox; var bsbox;
 		var pbox; var bpbox;
 		var wbox; var bwbox;
+		var correctSound;
+		var wrongSound;
 
 		function init() {
+
+			// load sound objects
+			// createjs.Sound.registerSound("/sound/right.mp3", correctSound)
+			// createjs.Sound.registerSound("/sound/wrong.mp3", wrongSound)
+
 			//2: initialise objects - Images
 			s1 = new Image();
 			s2 = new Image();
@@ -263,8 +272,14 @@
 			var cBin = ndgmr.checkPixelCollision(object, object2, alphaThreshold);
 			if (cBin) {
 				//check if correct bin, update score and remove object
-				if (object.num == object2.num) { score = score + 10; }
-				else { score = score - 10; }
+				if (object.num == object2.num) {
+					// createjs.Sound.play(correctSound)
+
+					score = score + 10; 
+				}
+				else {
+					score = score - 10; 
+				}
 				showtext.text = "Score : " + score;
 				container.removeChild(object);
 
@@ -278,8 +293,13 @@
 			var cRBin = ndgmr.checkPixelCollision(object, object3, alphaThreshold);
 			if (cRBin) {
 				//check if correct bin, update score and remove object
-				if (object.num == object3.num) { score = score + 10; }
-				else { score = score - 10; }
+				if (object.num == object3.num) {
+					// createjs.Sound.play(correctSound)
+					score = score + 10;
+				}
+				else {
+					score = score - 10; 
+				}
 				showtext.text = "Score : " + score;
 				container.removeChild(object);
 			}
@@ -287,8 +307,14 @@
 			var cRBin = ndgmr.checkPixelCollision(object, object4, alphaThreshold);
 			if (cRBin) {
 				//check if correct bin, update score and remove object
-				if (object.num == object4.num) { score = score + 10; }
-				else { score = score - 10; }
+				if (object.num == object4.num) {
+					// createjs.Sound.play(correctSound)
+
+					score = score + 10; 
+				}
+				else {
+					score = score - 10; 
+				}
 				showtext.text = "Score : " + score;
 				container.removeChild(object);
 			}
