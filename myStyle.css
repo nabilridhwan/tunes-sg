@@ -100,8 +100,31 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .page-footer{
+    text-align: left;
     background-color: #6D4C41;
-    color: white;
+    color: #B48778;
+    height: 9em;
+    display: flex;
+    align-items: center;
+    /* color: white; */
+}
+
+.social-media-btns{
+    text-decoration: none;
+    text-align: center;
+    margin: 0 10px 0 0;
+    padding: 2px;
+    background: transparent;
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    border: 2px solid #B48778;
+}
+
+.social-media-btns a{
+    font-size: 1.2rem;
+    color: #B48778;
+
 }
 
 @media (min-width: 576px) {
