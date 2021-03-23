@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&family=Sacramento&display=swap');
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -101,6 +101,15 @@ h1, h2, h3, h4, h5, h6{
     margin: 1em 0 0.5em 0;
 }
 
+.instrumnet-description{
+    margin: auto;
+    width: 70%;
+}
+
+.audio-preview{
+    margin: 1.5rem 0 0 0;
+}
+
 .page-footer{
     text-align: left;
     background-color: #6D4C41;
@@ -140,6 +149,23 @@ h1, h2, h3, h4, h5, h6{
 
 .social-media-btns:hover > a{
     color: white;
+}
+
+#carouselVideo{
+    width: 70%;
+    margin: auto;
+}
+
+#carouselVideo h1{
+    margin: 0 0 2rem 0;
+    font-weight: 700;
+    color: #6D4C41;
+    text-align: center;
+}
+
+iframe{
+    width: 100%;
+    height: 500px;
 }
 
 @media (min-width: 576px) {

@@ -27,50 +27,49 @@
 
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar navbar-dark">
-      <div class="container">
-          <a class="navbar-brand" href="index.html">Tunes</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="aboutus.html">About Us</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link active dropdown-toggle" href="MIGuide.html" id="navbarDropdown" role="button"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          Musical Instrument Guide
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="percussion.html">Percussion</a></li>
-                          <li>
-                              <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="woodwind.html">Woodwinds</a></li>
-                          <li>
-                              <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="strings.html">Strings</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="game.html">Game</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contactus.html">Contact Us</a>
-                  </li>
-              </ul>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Tunes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="MIGuide.html" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Musical Instrument Guide
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="percussion.html">Percussion</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="woodwind.html">Woodwinds</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="strings.html">Strings</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="game.html">Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact Us</a>
+          </li>
+        </ul>
 
-          </div>
       </div>
+    </div>
   </nav>
 
   <!--Jumbotron-->
@@ -87,9 +86,19 @@
     <img class="instrument-image" src="./image/classicalguitar.jpg">
     <div class="container">
       <h1 class="instrument-name">Classical Guitar</h1>
-      <p class="instrumnet-description">An acoustic wooden string instrument with strings made of gut or nylon. The classical guitar can play a wide range of types of music-from classical music to bossa nova and jazz.
+      <p class="instrumnet-description">An acoustic wooden string instrument with strings made of gut or nylon. The
+        classical guitar can play a wide range of types of music-from classical music to bossa nova and jazz.
         Dubbed a mini-orchestra, the classical guitar covers an impressive range of timbres.
-        </p>
+      </p>
+
+      <div class="audio-preview">
+        <p>Listen to a sample below</p>
+        <audio controls>
+          <source src="sound/Classical_Guitar.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
     </div>
   </div>
 
@@ -98,7 +107,18 @@
     <img class="instrument-image" src="./image/acousticguitar.jpg">
     <div class="container">
       <h1 class="instrument-name">Acoustic Guitar</h1>
-      <p class="instrumnet-description">Acoustic Guitar’s strings vibrate a sound board on a resonant body to project a sound wave through the air. The timbre of a guitar is determined by its body. Most people have never looked inside a guitar and may not realize it, but guitars are actually very cleverly designed.</p>
+      <p class="instrumnet-description">Acoustic Guitar’s strings vibrate a sound board on a resonant body to project a
+        sound wave through the air. The timbre of a guitar is determined by its body. Most people have never looked
+        inside a guitar and may not realize it, but guitars are actually very cleverly designed.</p>
+
+      <div class="audio-preview">
+        <p>Listen to a sample below</p>
+        <audio controls>
+          <source src="sound/Acoustic_Guitar.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
     </div>
   </div>
 
@@ -107,7 +127,19 @@
     <img class="instrument-image" src="./image/electricguitar.jpg">
     <div class="container">
       <h1 class="instrument-name">Electric Guitar</h1>
-      <p class="instrumnet-description">An electric guitar is a guitar that requires external amplification in order to be heard at typical performance volumes, unlike a standard acoustic guitar. Even though electricity is used to amplify the volume, the body and neck are merely pieces of wood. These instruments come in unique shapes and colors.</p>
+      <p class="instrumnet-description">An electric guitar is a guitar that requires external amplification in order to
+        be heard at typical performance volumes, unlike a standard acoustic guitar. Even though electricity is used to
+        amplify the volume, the body and neck are merely pieces of wood. These instruments come in unique shapes and
+        colors.</p>
+
+      <div class="audio-preview">
+        <p>Listen to a sample below</p>
+        <audio controls>
+          <source src="sound/Electric_Guitar.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
     </div>
   </div>
 
@@ -116,8 +148,62 @@
     <img class="instrument-image" src="./image/violin.jpg">
     <div class="container">
       <h1 class="instrument-name">Violin</h1>
-      <p class="instrumnet-description">The violin, sometimes known as a fiddle, is a wooden chordophone in the violin family. Most violins have a hollow wooden body. It is the smallest and thus highest-pitched instrument in the family in regular use. Whether performing an elegant solo or being the heart of the orchestra, the violin is a "star" in the music world.</p>
+      <p class="instrumnet-description">The violin, sometimes known as a fiddle, is a wooden chordophone in the violin
+        family. Most violins have a hollow wooden body. It is the smallest and thus highest-pitched instrument in the
+        family in regular use. Whether performing an elegant solo or being the heart of the orchestra, the violin is a
+        "star" in the music world.</p>
+
+      <div class="audio-preview">
+        <p>Listen to a sample below</p>
+        <audio controls>
+          <source src="sound/Violin.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
     </div>
+  </div>
+
+  <!-- Video slideshow -->
+  <div id="carouselVideo" class="carousel slide" data-bs-ride="carousel">
+    <h1>Let's Learn More!</h1>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BBz-Jyr23M4" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="carousel-item">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HNSaXAe8tyg" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="carousel-item">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RY3AvEGKfZ0" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+
+      <div class="carousel-item">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oL0VmzrNkLU" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselVideo" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
 
