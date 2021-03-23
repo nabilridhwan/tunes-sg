@@ -83,12 +83,15 @@
                 <p>Click on any of these buttons to contact us directly!</p>
                 <div class="contact-us-content my-4">
 
-                    <a class="btn btn-primary" role="button">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#emailModal">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </a>
-                    <a class="btn btn-primary" role="button">
+                    </button>
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#phoneModal">
                         <i class="fa fa-phone" aria-hidden="true"></i>
-                    </a>
+                    </button>
                 </div>
             </div>
 
@@ -118,30 +121,59 @@
         </div>
     </div>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-        Launch demo modal
-    </button>
 
-    <div class="modal" role="dialog">
-        <div class="modal-dialog" role="document">
+    <!-- Modal -->
+    <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title" id="emailModalLabel">
+                        Email Us
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Modal body text goes here.</p>
+                    <p>
+                        You can email us at contactus@tunes.com.sg. Alternatively, you can click on the button below to
+                        email us directly.
+                    </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="mailto:contactus@tunes.com.sg" class="btn btn-primary">
+                        Email Us
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="phoneModal" tabindex="-1" aria-labelledby="phoneModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="phoneModalLabel">
+                        Call Us
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        You can call us at 6777 8888. Alternatively, you can click on the button below to
+                        call us directly.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="phone:67778888" class="btn btn-primary">
+                        Call Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!--Footer-->
 
